@@ -1,123 +1,333 @@
 <!doctype html>
-<html lang="tr">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pera Vira — Yasal / Legal</title>
+<title>Pera Vira — Private drivers in Istanbul</title>
+<meta name="description" content="Airport meet and greet and full-day chauffeur service in Istanbul with licensed local drivers. One fixed price, no surprises.">
+<meta name="apple-itunes-app" content="app-id=6815432878">
+<meta property="og:title" content="Pera Vira — Istanbul, handled.">
+<meta property="og:description" content="Airport meet and greet and full-day chauffeur service in Istanbul with licensed local drivers. One fixed price.">
+<meta property="og:image" content="icon.png">
+<meta name="theme-color" content="#0F0E0B">
+<link rel="icon" href="favicon.png">
 <style>
-  :root { --ink:#1E1A12; --dim:#6B6150; --faint:#9C8F72; --bg:#FAF7F0; --line:#E6DBC0; --accent:#96702A; }
+  :root {
+    color-scheme: dark;
+    --bg:#0F0E0B; --surface:#1A1812; --ink:#F3ECDC; --dim:#BDB296; --faint:#8F8368;
+    --line:#2E2A1D; --accent:#C9A45C; --accent-ink:#14130F; --band:#191710;
+  }
   * { box-sizing:border-box; }
-  body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-  .wrap { max-width:760px; margin:0 auto; padding:40px 22px 80px; }
-  .bar { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:28px; }
-  .bar button { border:1px solid var(--line); background:#fff; color:var(--dim); border-radius:999px; padding:8px 14px; font-size:13px; font-weight:600; cursor:pointer; }
-  .bar button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
-  h1 { font-size:26px; letter-spacing:-.6px; margin:0 0 4px; }
-  h2 { font-size:17px; margin:28px 0 8px; }
-  .updated { color:var(--faint); font-size:13px; margin:0 0 18px; }
-  .intro { color:var(--dim); }
-  p { margin:0 0 10px; color:var(--dim); }
-  section p { color:var(--dim); }
-  article { display:none; }
-  article.on { display:block; }
-  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--line); color:var(--faint); font-size:13px; }
-  a { color:var(--accent); }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg) radial-gradient(900px 460px at 50% -120px, rgba(201,164,92,.17), transparent 70%) no-repeat; color:var(--ink); font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; -webkit-font-smoothing:antialiased; }
+  html[lang="ar"] body { font-family:-apple-system,"Geeza Pro","Segoe UI",Tahoma,Arial,sans-serif; line-height:1.8; }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] .brand { font-family:-apple-system,"Geeza Pro","Segoe UI",Tahoma,Arial,sans-serif; letter-spacing:0; }
+  a { color:inherit; }
+  .wrap { max-width:1000px; margin:0 auto; padding:0 24px; }
+  :focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:6px; }
+
+  header { position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:18px; padding:14px 0; background:rgba(15,14,11,.86); -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); }
+  header .brand { margin-inline-end:auto; }
+  nav#nav { display:flex; gap:26px; }
+  nav#nav a { text-decoration:none; color:var(--dim); font-size:15px; font-weight:500; }
+  nav#nav a:hover { color:var(--ink); }
+  .menu { display:none; background:transparent; border:1px solid var(--line); color:var(--ink); border-radius:10px; padding:8px 11px; font-size:18px; line-height:1; cursor:pointer; }
+  section, .hero { scroll-margin-top:72px; }
+  .brand { display:flex; align-items:center; gap:10px; text-decoration:none; font-family:Georgia,serif; font-weight:700; font-size:20px; }
+  .brand img { width:34px; height:34px; border-radius:9px; box-shadow:0 0 0 1px #3A3424; }
+  .lang { display:flex; gap:6px; }
+  .lang button { border:1px solid var(--line); background:transparent; color:var(--dim); font:600 13px/1 inherit; border-radius:999px; padding:8px 12px; cursor:pointer; }
+  .lang button.on { background:var(--ink); color:var(--bg); border-color:var(--ink); }
+
+  .hero { text-align:center; padding:56px 0 84px; }
+  .logo { width:104px; height:104px; border-radius:26px; margin:0 auto 28px; display:block; box-shadow:0 0 0 1px #3A3424, 0 18px 60px rgba(201,164,92,.22); }
+  h1 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(38px,6.4vw,64px); line-height:1.08; letter-spacing:-1.4px; margin:0 auto 18px; max-width:14em; text-wrap:balance; }
+  .lead { font-size:19px; color:var(--dim); max-width:34em; margin:0 auto 30px; }
+  .cta { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .btn { display:inline-flex; align-items:center; text-decoration:none; font-weight:600; font-size:16px; padding:14px 24px; border-radius:12px; border:1px solid transparent; }
+  .btn.primary { background:var(--accent); color:var(--accent-ink); }
+  .btn.ghost { border-color:var(--line); background:var(--surface); }
+  .btn:hover { filter:brightness(.96); }
+  .badge { display:inline-flex; align-items:center; }
+  .badge img { display:block; height:56px; width:auto; }
+  .cta { align-items:center; }
+  .note { font-size:14px; color:var(--faint); margin:18px auto 0; max-width:34em; }
+
+  section { padding:68px 0; border-top:1px solid var(--line); }
+  h2 { font-family:Georgia,serif; font-size:clamp(26px,4vw,36px); letter-spacing:-.7px; line-height:1.15; margin:0 0 12px; text-wrap:balance; }
+  .sub { color:var(--dim); max-width:36em; margin:0 0 36px; }
+  .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; list-style:none; margin:0; padding:0; counter-reset:s; }
+  .steps li { counter-increment:s; }
+  .steps li::before { content:counter(s); display:block; font:700 40px/1 Georgia,serif; color:var(--accent); margin-bottom:10px; }
+  .steps h3 { font-size:19px; margin:0 0 6px; }
+  .steps p, .principles p, .card p { margin:0; color:var(--dim); font-size:16px; }
+
+  .principles { display:grid; grid-template-columns:repeat(2,1fr); gap:0; border:1px solid var(--line); border-radius:18px; background:var(--surface); overflow:hidden; }
+  .principles > div { padding:26px 28px; border-bottom:1px solid var(--line); }
+  .principles > div:nth-child(odd) { border-inline-end:1px solid var(--line); }
+  .principles > div:nth-last-child(-n+2) { border-bottom:0; }
+  .principles h3 { font-size:18px; margin:0 0 6px; }
+
+  .services { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  .card { background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:26px; }
+  .card h3 { font-family:Georgia,serif; font-size:22px; margin:0 0 8px; }
+  html[lang="ar"] .card h3 { font-family:inherit; }
+
+  body { overflow-x:clip; }
+  .drivers { background:var(--band); color:var(--ink); border-top:1px solid #3A3424; border-bottom:1px solid #3A3424; margin-inline:calc(50% - 50vw); padding-inline:calc(50vw - 50%); }
+  .drivers .sub { color:var(--dim); }
+  .drivers .btn.primary { background:var(--accent); color:var(--accent-ink); }
+  .drivers .btn.ghost { background:transparent; border-color:#4A4430; color:var(--ink); }
+
+  details { border-top:1px solid var(--line); padding:16px 0; }
+  details:last-of-type { border-bottom:1px solid var(--line); }
+  summary { cursor:pointer; font-weight:600; font-size:18px; }
+  details p { color:var(--dim); margin:10px 0 0; max-width:42em; }
+
+  .contact { text-align:center; }
+  .contact .sub { margin-inline:auto; }
+
+  footer { padding:44px 0 60px; color:var(--faint); font-size:14px; }
+  footer .row { display:flex; flex-wrap:wrap; gap:16px 28px; justify-content:space-between; }
+  footer a { text-decoration:none; border-bottom:1px solid var(--line); }
+  [hidden] { display:none !important; }
+
+  @media (max-width:860px) {
+    .menu { display:inline-block; }
+    nav#nav { display:none; position:absolute; top:100%; inset-inline:0; flex-direction:column; gap:0; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:4px 18px; margin-top:6px; }
+    nav#nav.open { display:flex; }
+    nav#nav a { padding:13px 0; border-bottom:1px solid var(--line); color:var(--ink); }
+    nav#nav a:last-child { border-bottom:0; }
+  }
+  .brand span { white-space:nowrap; }
+  @media (max-width:520px) {
+    header { gap:10px; }
+    .brand { font-size:18px; gap:8px; }
+    .brand img { width:30px; height:30px; }
+    .lang { gap:4px; }
+    .lang button { padding:7px 9px; font-size:12px; }
+    .menu { padding:7px 10px; }
+  }
+  @media (max-width:760px) {
+    .steps, .services, .principles { grid-template-columns:1fr; }
+    .principles > div { border-inline-end:0 !important; border-bottom:1px solid var(--line) !important; }
+    .principles > div:last-child { border-bottom:0 !important; }
+    section { padding:52px 0; }
+    .hero { padding:36px 0 60px; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div class="bar">
-    <button data-doc="privacy" class="on">Gizlilik / Privacy</button>
-    <button data-doc="terms">Koşullar / Terms</button>
-    <span style="flex:1"></span>
-    <button data-lang="tr" class="on">TR</button>
-    <button data-lang="en">EN</button>
-  </div>
+  <header>
+    <a class="brand" href="#top"><img src="icon.png" alt="" width="34" height="34"><span>Pera Vira</span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="#how" data-i18n="nav_how">How it works</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#drivers" data-i18n="nav_drivers">Drivers</a>
+      <a href="#faq" data-i18n="nav_faq">Questions</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="on">EN</button>
+      <button type="button" data-lang="tr">TR</button>
+      <button type="button" data-lang="ar">AR</button>
+    </div>
+    <button type="button" class="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
+  </header>
 
-  <div id="tr-privacy" class="doc"><article>
-  <h1>Gizlilik Politikası ve Aydınlatma Metni</h1>
-  <p class="updated">2026-09-10</p>
-  <p class="intro">Bu metin, Pera Vira mobil uygulaması ("Uygulama") aracılığıyla işlenen kişisel verilere ilişkin olarak 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") kapsamında hazırlanmıştır.</p>
-  <section><h2>1. Veri Sorumlusu</h2><p>Veri sorumlusu: Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi</p><p>Adres: Veysel Karani Mah. Çolakoğlu Sk. Rings No:10 İç Kapı No:78 Sancaktepe / İstanbul</p><p>Vergi Dairesi / VKN: Sultanbeyli / 3390602912</p><p>İletişim: erbaytrade@gmail.com</p></section>
-<section><h2>2. İşlenen Kişisel Veriler</h2><p>• Kimlik ve iletişim: ad soyad, telefon numarası, e-posta adresi, dil tercihi, (sürücüler için) firma unvanı.</p><p>• Müşteri talep verileri: karşılama/varış noktası, tarih aralığı, yolcu sayısı, uçuş numarası ve talep notları.</p><p>• Sürücü doğrulama verileri: araç plakası ve modeli, ruhsat ve D2 yetki belgesi görselleri, IBAN, ödeme referans kodu.</p><p>• İşlem ve güvenlik verileri: hesap oluşturma/giriş kayıtları, uygulama içi işlem geçmişi (açılan/kabul edilen talepler, tamamlama ve anlaşmazlık kayıtları).</p><p>• Teknik veriler: cihaz dili ve uygulamanın çalışması için cihazda saklanan yerel tercihler.</p><p>• Konum verisi: Sürücünün konumu, yalnızca kabul ettiği bir iş aktifken ve uygulama ön plandayken kaydedilir; yalnızca yönetici tarafından görülebilir. Sürekli veya arka planda takip yapılmaz.</p></section>
-<section><h2>3. İşleme Amaçları</h2><p>• Müşteri ile sürücüyü eşleştirerek aracılık hizmetini sunmak,</p><p>• Sürücü başvurularını ve belgelerini doğrulamak, hesap onayı vermek,</p><p>• Gün başına erişim ücreti ödemelerini takip etmek,</p><p>• Talep, tamamlama ve anlaşmazlık süreçlerini yürütmek, destek sağlamak,</p><p>• Hizmet güvenliğini sağlamak, kötüye kullanımı ve dolandırıcılığı önlemek,</p><p>• Mali mevzuat ve diğer yasal yükümlülükleri yerine getirmek.</p></section>
-<section><h2>4. Hukuki Sebepler (KVKK md. 5 ve 6)</h2><p>• Bir sözleşmenin kurulması veya ifası için veri işlemenin gerekli olması (üyelik ve hizmet sözleşmesi),</p><p>• Veri sorumlusunun hukuki yükümlülüğünü yerine getirmesi (ör. mali kayıtlar),</p><p>• Bir hakkın tesisi, kullanılması veya korunması için veri işlemenin zorunlu olması (anlaşmazlıklar),</p><p>• İlgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaati (güvenlik, hizmet iyileştirme),</p><p>• Gereken hâllerde açık rıza.</p></section>
-<section><h2>5. Kişisel Verilerin Aktarılması</h2><p>• Eşleşme gerçekleştiğinde, hizmetin gereği olarak müşteri ile sürücü birbirlerinin adı ve telefon numarasını görür.</p><p>• Uygulama altyapısı ve veri barındırma hizmeti üçüncü taraf hizmet sağlayıcılardan (ör. Supabase Inc.) alınır; bu sağlayıcılar veri işleyen sıfatıyla Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi adına ve talimatları doğrultusunda hareket eder.</p><p>• Söz konusu barındırma sunucuları yurt dışında bulunabilir; bu durumda aktarım, KVKK md. 9 kapsamında gerekli şartlar sağlanarak yapılır.</p><p>• Yasal olarak yetkili kamu kurum ve kuruluşlarına, talep edilmesi hâlinde mevzuat çerçevesinde aktarım yapılabilir.</p><p>• Ödemeler uygulama dışında gerçekleştiği için ödeme kartı bilgisi işlenmez ve aktarılmaz.</p></section>
-<section><h2>6. Saklama Süresi</h2><p>Kişisel veriler, işleme amacının gerektirdiği süre boyunca ve ilgili mevzuatta öngörülen zamanaşımı / saklama süreleri sona erene kadar saklanır. Hesabınızı sildiğinizde, yasal saklama yükümlülüğü bulunmayan verileriniz silinir veya anonim hâle getirilir; mali kayıtlar gibi mevzuat gereği saklanması zorunlu veriler ilgili süre boyunca saklanır.</p></section>
-<section><h2>7. İlgili Kişinin Hakları (KVKK md. 11)</h2><p>Kişisel verisi işlenen kişi olarak; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, işleme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme, yurt içinde/yurt dışında aktarıldığı üçüncü kişileri bilme, eksik veya yanlış işlenmişse düzeltilmesini isteme, silinmesini/yok edilmesini isteme, bu işlemlerin aktarıldığı üçüncü kişilere bildirilmesini isteme, münhasıran otomatik sistemlerle analiz sonucu aleyhinize bir sonuç doğmasına itiraz etme ve kanuna aykırı işleme nedeniyle zarara uğrarsanız zararın giderilmesini talep etme haklarına sahipsiniz.</p></section>
-<section><h2>8. Başvuru Yöntemi</h2><p>Haklarınıza ilişkin taleplerinizi erbaytrade@gmail.com adresine e-posta ile iletebilirsiniz. Başvurular en geç 30 gün içinde sonuçlandırılır. Uygulama içinden "Profil &gt; Hesabımı sil" seçeneğiyle hesabınızı ve verilerinizi doğrudan silebilirsiniz.</p></section>
-<section><h2>9. Çerezler ve Yerel Depolama</h2><p>Uygulama, pazarlama amaçlı çerez kullanmaz. Yalnızca oturumun sürdürülmesi ve dil/görünüm tercihi gibi işlevsel bilgiler cihazınızda yerel olarak saklanır.</p></section>
-<section><h2>10. Değişiklikler</h2><p>Bu metin zaman zaman güncellenebilir. Güncel sürüm her zaman uygulama içinde yayımlanır; yukarıdaki "son güncelleme" tarihi değişikliği gösterir.</p></section>
-<section><h2>11. İletişim</h2><p>Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi</p><p>Veysel Karani Mah. Çolakoğlu Sk. Rings No:10 İç Kapı No:78 Sancaktepe / İstanbul</p><p>erbaytrade@gmail.com</p></section>
-</article></div>
-  <div id="tr-terms" class="doc"><article>
-  <h1>Kullanım Koşulları</h1>
-  <p class="updated">2026-09-10</p>
-  <p class="intro">Pera Vira uygulamasını kullanarak bu Kullanım Koşullarını kabul etmiş olursunuz. Uygulamayı işleten: Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi ("Pera Vira" veya "Platform").</p>
-  <section><h2>1. Hizmetin Tanımı</h2><p>Pera Vira, İstanbul havalimanı karşılama ve günlük şoför hizmeti almak isteyen müşteriler ("Müşteri") ile bu hizmeti veren turizm taşımacılığı firmaları / şoförler ("Sürücü") arasında eşleşme sağlayan bir aracı platformdur.</p><p>Taşıma hizmeti doğrudan Sürücü tarafından verilir. Pera Vira taşıma sözleşmesinin tarafı değildir, taşıyıcı veya acente sıfatını taşımaz; yalnızca tarafların iletişime geçmesini sağlar.</p></section>
-<section><h2>2. Üyelik ve Hesap</h2><p>Uygulamayı kullanmak için 18 yaşını doldurmuş olmanız ve doğru, güncel bilgiler vermeniz gerekir.</p><p>Hesap güvenliğinden ve hesabınız üzerinden yapılan işlemlerden siz sorumlusunuz.</p></section>
-<section><h2>3. Ücretlendirme</h2><p>Müşteri ile Sürücü arasındaki hizmet bedeli sabittir: günlük 140 USD (gün sayısı ile çarpılır). Bu bedel Müşteri ile Sürücü arasında, uygulama dışında ödenir. Pera Vira bu bedelden komisyon veya pay almaz.</p><p>Sürücü, tamamladığı her iş için Platforma gün başına 15 USD erişim ücreti öder (ör. 3 günlük iş = 45 USD). Bu ücret Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi tarafından tahsil edilir ve iş hacmine bağlı değildir.</p><p>Ödenen erişim ücreti, hesap kapatma veya hesap silme hâlinde iade edilmez.</p></section>
-<section><h2>4. Müşteri Yükümlülükleri</h2><p>Talep bilgilerini (tarih, uçuş, yolcu sayısı, varış adresi) doğru girmek,</p><p>Kararlaştırılan hizmet bedelini Sürücüye ödemek,</p><p>Sürücüye ve araca saygılı davranmak ve yürürlükteki mevzuata uymak.</p></section>
-<section><h2>5. Sürücü Yükümlülükleri</h2><p>Geçerli araç ruhsatı ve D2 yetki belgesi yüklemek; bu belgelerin güncel ve gerçek olduğunu taahhüt etmek,</p><p>Taşımacılık faaliyeti için gereken tüm izin, belge ve sigortalara sahip olmak; sürücü/araç mevzuatına (SRC belgesi dâhil) uymak — bu yükümlülüklerin takibi ve sorumluluğu Sürücüye aittir,</p><p>Kabul ettiği işi kararlaştırılan şekilde, zamanında ve güvenli biçimde yerine getirmek,</p><p>Müşteri bilgilerini yalnızca hizmetin ifası için kullanmak.</p></section>
-<section><h2>6. Platformun Rolü ve Sorumluluk Sınırı</h2><p>Pera Vira, Sürücülerin sunduğu hizmetin kalitesi, güvenliği, zamanında ifası veya Müşterinin ödeme yapması konusunda taraf veya kefil değildir ve bunları garanti etmez.</p><p>Belge kontrolü Platform tarafından iyi niyetle yapılır; ancak bu kontrol, Sürücünün yasal uygunluğunun nihai teminatı anlamına gelmez.</p><p>Pera Vira, yürürlükteki hukukun izin verdiği ölçüde, dolaylı zararlardan ve taraflar arasındaki uyuşmazlıklardan sorumlu tutulamaz.</p></section>
-<section><h2>7. İptal, Tamamlama ve Anlaşmazlık</h2><p>Müşteri, bir Sürücü işi kabul etmeden önce talebini iptal edebilir. Sürücü, kabul ettiği işi bırakabilir; sık bırakma hesabın askıya alınmasına yol açabilir.</p><p>İş tamamlandığında Sürücü işi "tamamlandı" olarak işaretler; Müşteri onaylar veya sorun bildirir. Müşteri süresinde yanıt vermezse iş otomatik kapanabilir.</p><p>Anlaşmazlıklar Platform yönetimine iletilir; yönetim, tarafların bilgilerini inceleyerek kaydı kapatabilir ve haksız verilen olumsuz puanı geri alabilir. Bu değerlendirme bir yargı kararı yerine geçmez.</p></section>
-<section><h2>8. Yasak Kullanımlar</h2><p>Platformu hukuka aykırı amaçlarla kullanmak, sahte bilgi veya belge sunmak, başka bir kullanıcıyı taciz etmek, Platform dışı ödeme yönlendirmeleriyle sistemi baypas etmeye çalışmak yasaktır ve hesabın kapatılmasına yol açar.</p></section>
-<section><h2>9. Fikri Mülkiyet</h2><p>Uygulama, "Pera Vira" adı ve logosu, tasarımı ve içeriği Platforma aittir; izinsiz kullanılamaz.</p></section>
-<section><h2>10. Hesabın Askıya Alınması ve Feshi</h2><p>Platform, bu Koşullara aykırılık, güvenlik riski veya yasal zorunluluk hâlinde bir hesabı askıya alabilir veya kapatabilir. Kullanıcı da dilediği zaman hesabını uygulama içinden silebilir.</p></section>
-<section><h2>11. Uygulanacak Hukuk ve Yetki</h2><p>Bu Koşullara Türk hukuku uygulanır. Uyuşmazlıklarda İstanbul (Çağlayan) Mahkemeleri ve İcra Daireleri yetkilidir. Tüketici işlemleri bakımından tüketicinin yerleşim yerindeki tüketici hakem heyetleri ve mahkemelerinin yetkisi saklıdır.</p></section>
-<section><h2>12. Değişiklikler ve İletişim</h2><p>Platform bu Koşulları güncelleyebilir; güncel sürüm uygulamada yayımlanır. Sorularınız için: erbaytrade@gmail.com</p></section>
-</article></div>
-  <div id="en-privacy" class="doc"><article>
-  <h1>Privacy Policy</h1>
-  <p class="updated">2026-09-10</p>
-  <p class="intro">This Privacy Policy explains how personal data is processed through the Pera Vira mobile application ("App"), in accordance with Turkish Law No. 6698 on the Protection of Personal Data ("KVKK") and applicable data protection rules.</p>
-  <section><h2>1. Data Controller</h2><p>Data controller: Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi</p><p>Address: Veysel Karani Mah. Çolakoğlu Sk. Rings No:10 İç Kapı No:78 Sancaktepe / İstanbul</p><p>Tax office / Tax ID: Sultanbeyli / 3390602912</p><p>Contact: erbaytrade@gmail.com</p></section>
-<section><h2>2. Personal Data We Process</h2><p>• Identity &amp; contact: full name, phone number, email address, language preference, and (for drivers) company name.</p><p>• Customer request data: pick-up / drop-off point, date range, number of passengers, flight number and request notes.</p><p>• Driver verification data: vehicle plate and model, vehicle registration and D2 permit images, IBAN, payment reference code.</p><p>• Transaction &amp; security data: sign-up / sign-in records, in-app activity history (requests created / accepted, completion and dispute records).</p><p>• Technical data: device language and local preferences stored on your device for the App to function.</p><p>• Location data: the Driver's location is recorded only while an accepted job is active and the App is in the foreground; it is visible only to the platform administrator. There is no continuous or background tracking.</p></section>
-<section><h2>3. Purposes of Processing</h2><p>• To provide the intermediary service by matching customers with drivers,</p><p>• To verify driver applications and documents and approve accounts,</p><p>• To track the per-day access fee payments,</p><p>• To manage requests, completions and disputes, and provide support,</p><p>• To ensure service security and prevent misuse and fraud,</p><p>• To comply with tax legislation and other legal obligations.</p></section>
-<section><h2>4. Legal Bases</h2><p>• Processing necessary for the conclusion or performance of a contract (membership and service agreement),</p><p>• Compliance with a legal obligation of the data controller (e.g. financial records),</p><p>• Processing necessary for the establishment, exercise or protection of a right (disputes),</p><p>• Legitimate interests of the data controller, provided your fundamental rights are not overridden (security, service improvement),</p><p>• Your explicit consent where required.</p></section>
-<section><h2>5. Data Sharing and Transfers</h2><p>• When a match occurs, the customer and driver see each other’s name and phone number, as required to deliver the service.</p><p>• Application infrastructure and hosting are provided by third-party service providers (e.g. Supabase Inc.) acting as data processors on behalf of and under the instructions of Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi.</p><p>• Hosting servers may be located outside Türkiye; in that case transfers are made subject to the conditions required under Article 9 of the KVKK.</p><p>• Data may be disclosed to competent public authorities where legally required.</p><p>• Because payments take place outside the App, no payment card data is processed or transferred.</p></section>
-<section><h2>6. Retention</h2><p>Personal data is retained for as long as necessary for the processing purpose and until the statutory limitation / retention periods expire. When you delete your account, data with no legal retention requirement is deleted or anonymised; data that must be retained by law (such as financial records) is kept for the required period.</p></section>
-<section><h2>7. Your Rights</h2><p>Under Article 11 of the KVKK you have the right to: learn whether your data is processed and request information; learn the purpose of processing and whether data is used accordingly; know the third parties to whom data is transferred; request correction of incomplete or inaccurate data; request erasure or destruction; request that such actions be notified to third parties; object to results arising solely from automated analysis; and claim compensation for damage caused by unlawful processing.</p></section>
-<section><h2>8. How to Exercise Your Rights</h2><p>You may send requests regarding your rights by email to erbaytrade@gmail.com. Requests are answered within 30 days at the latest. You can also delete your account and data directly from the App via "Profile &gt; Delete my account".</p></section>
-<section><h2>9. Cookies and Local Storage</h2><p>The App does not use marketing cookies. Only functional information such as session state and language / appearance preferences is stored locally on your device.</p></section>
-<section><h2>10. Changes</h2><p>This Policy may be updated from time to time. The current version is always published in the App; the "last updated" date above indicates the latest change.</p></section>
-<section><h2>11. Contact</h2><p>Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi</p><p>Veysel Karani Mah. Çolakoğlu Sk. Rings No:10 İç Kapı No:78 Sancaktepe / İstanbul</p><p>erbaytrade@gmail.com</p></section>
-</article></div>
-  <div id="en-terms" class="doc"><article>
-  <h1>Terms of Service</h1>
-  <p class="updated">2026-09-10</p>
-  <p class="intro">By using the Pera Vira application you agree to these Terms of Service. The App is operated by Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi ("Pera Vira" or the "Platform").</p>
-  <section><h2>1. The Service</h2><p>Pera Vira is an intermediary platform that matches customers seeking Istanbul airport meet &amp; greet and daily chauffeur services ("Customer") with tourism transport companies / drivers providing those services ("Driver").</p><p>The transport service is provided directly by the Driver. Pera Vira is not a party to the transport contract and does not act as a carrier or travel agency; it only enables the parties to get in contact.</p></section>
-<section><h2>2. Membership and Account</h2><p>You must be at least 18 years old and provide accurate, up-to-date information to use the App.</p><p>You are responsible for the security of your account and for activity carried out through it.</p></section>
-<section><h2>3. Fees</h2><p>The service fee between Customer and Driver is fixed: USD 140 per day (multiplied by the number of days). This amount is paid between the Customer and the Driver outside the App. Pera Vira takes no commission or share of this amount.</p><p>The Driver pays the Platform a per-day access fee of USD 15 for each completed job (e.g. a 3-day job = USD 45) to view open requests and accept jobs. This fee is collected by Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi and is independent of job volume.</p><p>The access fee paid is non-refundable upon account closure or deletion.</p></section>
-<section><h2>4. Customer Obligations</h2><p>Enter request details (dates, flight, passenger count, destination) accurately;</p><p>Pay the agreed service fee to the Driver;</p><p>Treat the Driver and vehicle respectfully and comply with applicable law.</p></section>
-<section><h2>5. Driver Obligations</h2><p>Upload a valid vehicle registration and D2 permit, and warrant that these documents are current and genuine;</p><p>Hold all permits, documents and insurance required for transport activity and comply with driver/vehicle regulations (including the SRC certificate) — monitoring and responsibility for these obligations rest with the Driver;</p><p>Perform accepted jobs as agreed, on time and safely;</p><p>Use customer information only for performing the service.</p></section>
-<section><h2>6. Role of the Platform and Limitation of Liability</h2><p>Pera Vira is not a party or guarantor and does not warrant the quality, safety or timely performance of the service provided by Drivers, or that the Customer will pay.</p><p>Document checks are performed by the Platform in good faith; such checks are not a final guarantee of a Driver’s legal compliance.</p><p>To the extent permitted by applicable law, Pera Vira is not liable for indirect damages or for disputes between the parties.</p></section>
-<section><h2>7. Cancellation, Completion and Disputes</h2><p>A Customer may cancel a request before a Driver accepts it. A Driver may release an accepted job; frequent releases may lead to account suspension.</p><p>When a job is done the Driver marks it "completed"; the Customer confirms or reports a problem. If the Customer does not respond in time, the job may close automatically.</p><p>Disputes are escalated to Platform management, which may close the record after reviewing the parties’ information and may reverse an unfair strike. This assessment does not replace a court decision.</p></section>
-<section><h2>8. Prohibited Use</h2><p>Using the Platform for unlawful purposes, submitting false information or documents, harassing another user, or attempting to bypass the system by redirecting payments off-Platform is prohibited and leads to account closure.</p></section>
-<section><h2>9. Intellectual Property</h2><p>The App, the "Pera Vira" name and logo, its design and content belong to the Platform and may not be used without permission.</p></section>
-<section><h2>10. Suspension and Termination</h2><p>The Platform may suspend or close an account in case of breach of these Terms, security risk or legal requirement. You may also delete your account at any time from within the App.</p></section>
-<section><h2>11. Governing Law and Jurisdiction</h2><p>These Terms are governed by Turkish law. The Istanbul (Çağlayan) Courts and Execution Offices have jurisdiction over disputes. For consumer transactions, the jurisdiction of the consumer arbitration committees and courts at the consumer’s place of residence is reserved.</p></section>
-<section><h2>12. Changes and Contact</h2><p>The Platform may update these Terms; the current version is published in the App. Questions: erbaytrade@gmail.com</p></section>
-</article></div>
+  <main id="top">
+    <div class="hero">
+      <img class="logo" src="icon.png" alt="Pera Vira" width="104" height="104">
+      <h1 data-i18n="h1">Istanbul, handled.</h1>
+      <p class="lead" data-i18n="lead">Airport meet and greet and full-day chauffeur service with licensed local drivers. One fixed price, no haggling, no surprises.</p>
+      <div class="cta">
+        <a class="badge" href="https://apps.apple.com/app/id6815432878"><img id="badge" src="badge-en.svg" alt="Download on the App Store" height="56"></a>
+        <a class="btn ghost" id="wa" href="#" hidden data-i18n="cta_wa">Message us on WhatsApp</a>
+      </div>
+      <p class="note" data-i18n="note">Available on iPhone. Pay your driver directly. The app does not take payments.</p>
+    </div>
+
+    <section id="how">
+      <h2 data-i18n="how_h">How it works</h2>
+      <p class="sub" data-i18n="how_sub">Three steps, from your arrival time to your driver at the gate.</p>
+      <ol class="steps">
+        <li><h3 data-i18n="s1_h">Open a request</h3><p data-i18n="s1_p">Tell us the airport or hotel, your dates and how many travellers.</p></li>
+        <li><h3 data-i18n="s2_h">A licensed driver accepts</h3><p data-i18n="s2_p">A driver is approved only after their operating licence and vehicle documents are reviewed.</p></li>
+        <li><h3 data-i18n="s3_h">Meet at arrivals</h3><p data-i18n="s3_p">Confirm your driver with a meeting code, then pay them directly. No hidden extras.</p></li>
+      </ol>
+    </section>
+
+    <section id="system">
+      <h2 data-i18n="sys_h">Our system</h2>
+      <p class="sub" data-i18n="sys_sub">A simple, clear arrangement for every traveller.</p>
+      <div class="principles">
+        <div><h3 data-i18n="p1_h">One fixed price</h3><p data-i18n="p1_p">You see a single daily price before you confirm, with no haggling at the airport.</p></div>
+        <div><h3 data-i18n="p2_h">Licensed drivers</h3><p data-i18n="p2_p">We review the operating licence and vehicle documents before approving any driver.</p></div>
+        <div><h3 data-i18n="p3_h">Meeting code</h3><p data-i18n="p3_p">Your driver confirms the meeting with a code that you share, so only the right person takes you.</p></div>
+        <div><h3 data-i18n="p4_h">Pay your driver directly</h3><p data-i18n="p4_p">The app does not handle your payment. You settle the fare with your driver.</p></div>
+      </div>
+    </section>
+
+    <section id="services">
+      <h2 data-i18n="svc_h">Two ways to travel</h2>
+      <p class="sub" data-i18n="svc_sub">Choose a simple transfer or keep a car and driver for the day.</p>
+      <div class="services">
+        <div class="card"><h3 data-i18n="c1_h">Airport meet and greet</h3><p data-i18n="c1_p">Your driver waits at arrivals and takes you straight to your hotel in Istanbul.</p></div>
+        <div class="card"><h3 data-i18n="c2_h">Car and driver, full day</h3><p data-i18n="c2_p">One vehicle at your disposal all day, for meetings, fairs, sightseeing or dinner. Fixed daily price.</p></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 data-i18n="about_h">About Pera Vira</h2>
+      <p class="sub" data-i18n="about_p1">Pera Vira connects travellers coming to Istanbul with licensed local tourism transport companies and drivers.</p>
+      <p class="sub" data-i18n="about_p2" style="margin-bottom:0">We review each driver's operating licence and vehicle documents, keep one clear fixed price, and leave payment between you and your driver. Pera Vira is operated by <bdi dir="ltr">ERBAYTRADE LTD</bdi>, based in Istanbul.</p>
+    </section>
+
+    <section id="drivers" class="drivers">
+      <div>
+        <h2 data-i18n="drv_h">Tourism transport companies and drivers</h2>
+        <p class="sub" data-i18n="drv_sub">Receive requests from travellers coming to Istanbul. Install the app, apply with your documents, and start once approved.</p>
+        <div class="cta" style="justify-content:flex-start">
+          <a class="btn primary" href="https://apps.apple.com/app/id6815432878" data-i18n="drv_cta">Apply in the app</a>
+          <a class="btn ghost" id="mail2" href="#" data-i18n="drv_mail">Ask us a question</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2 data-i18n="faq_h">Questions</h2>
+      <details><summary data-i18n="q1">Do I pay in the app?</summary><p data-i18n="a1">No. You pay your driver directly. The app only connects you with a licensed driver.</p></details>
+      <details><summary data-i18n="q2">Which city do you cover?</summary><p data-i18n="a2">Istanbul and its airports.</p></details>
+      <details><summary data-i18n="q3">Is the price really fixed?</summary><p data-i18n="a3">Yes. You see one daily price before you confirm, with no haggling at the airport.</p></details>
+      <details><summary data-i18n="q4">How do I know it is my driver?</summary><p data-i18n="a4">Your driver confirms the meeting with a code that you share, so only the right person takes you.</p></details>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 data-i18n="ct_h">Contact</h2>
+      <p class="sub" data-i18n="ct_sub">Questions about a trip or about joining as a driver? Write to us.</p>
+      <div class="cta">
+        <a class="btn primary" id="mail3" href="#"></a>
+        <a class="btn ghost" id="tel" href="tel:+905050051949"><bdi dir="ltr">+90 505 005 1949</bdi></a>
+        <a class="btn ghost" id="wa2" href="#" hidden data-i18n="cta_wa">Message us on WhatsApp</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    Erbaytrade Temizlik Ürünleri İthalat İhracat Sanayi ve Ticaret Limited Şirketi · Veysel Karani Mah. Çolakoğlu Sk. Rings No:10 İç Kapı No:78 Sancaktepe / İstanbul<br>
-    VKN 3390602912 · <a href="mailto:erbaytrade@gmail.com">erbaytrade@gmail.com</a>
+    <div class="row">
+      <div>
+        <strong style="color:var(--ink);font-family:Georgia,serif">Pera Vira</strong><br>
+        ERBAYTRADE LTD
+      </div>
+      <div>
+        <a href="pera-legal.html" data-i18n="legal">Privacy &amp; Terms</a><br>
+        <a href="tel:+905050051949"><bdi dir="ltr">+90 505 005 1949</bdi></a><br>
+        <a id="mail" href="#"></a>
+      </div>
+    </div>
   </footer>
 </div>
+
 <script>
-  var lang='tr', doc='privacy';
-  function sync(){
-    document.querySelectorAll('article').forEach(function(a){a.classList.remove('on');});
-    var el=document.querySelector('#'+lang+'-'+doc+' article'); if(el) el.classList.add('on');
-    document.querySelectorAll('[data-lang]').forEach(function(b){b.classList.toggle('on',b.dataset.lang===lang);});
-    document.querySelectorAll('[data-doc]').forEach(function(b){b.classList.toggle('on',b.dataset.doc===doc);});
-    document.documentElement.lang=lang;
+  // Fill in: empty WHATSAPP_NUMBER hides the WhatsApp buttons.
+  var WHATSAPP_NUMBER = "905050051949";                 // e.g. 905551234567 (country code, no plus sign, no spaces)
+  var CONTACT_EMAIL = "info@peravira.com";
+
+  var T = {
+    tr: {
+      h1:"İstanbul, tek dokunuşla.",
+      lead:"Havalimanı karşılama ve günlük şoförlü araç hizmeti, ruhsatlı yerel şoförlerle. Sabit fiyat, pazarlık yok, sürpriz yok.",
+      cta_app:"App Store'dan indir", cta_wa:"WhatsApp'tan yaz",
+      note:"iPhone için mevcut. Ödemeyi şoföre doğrudan yaparsınız, uygulama ödeme almaz.",
+      how_h:"Nasıl çalışır?", how_sub:"Üç adımda, varış saatinizden şoförünüzü kapıda görmeye kadar.",
+      s1_h:"Talep açın", s1_p:"Havalimanı ya da oteli, tarihlerinizi ve yolcu sayısını yazın.",
+      s2_h:"Ruhsatlı bir şoför kabul eder", s2_p:"Bir şoför, yetki ve araç belgeleri incelendikten sonra onaylanır.",
+      s3_h:"Varışta buluşun", s3_p:"Şoförünüzü karşılama koduyla doğrulayın, ödemeyi ona doğrudan yapın. Gizli ek ücret yok.",
+      sys_h:"Sistemimiz", sys_sub:"Her yolcu için sade ve net bir düzen.",
+      p1_h:"Sabit fiyat", p1_p:"Onaylamadan önce tek bir günlük fiyat görürsünüz, havalimanında pazarlık olmaz.",
+      p2_h:"Ruhsatlı şoförler", p2_p:"Bir şoförü onaylamadan önce işletme yetkisini ve araç belgelerini inceleriz.",
+      p3_h:"Karşılama kodu", p3_p:"Şoför, sizin paylaştığınız bir kodla karşılamayı doğrular, böylece sizi doğru kişi alır.",
+      p4_h:"Ödeme şoföre doğrudan", p4_p:"Uygulama ödeme almaz. Ücreti şoförle doğrudan siz kapatırsınız.",
+      svc_h:"İki seçenek", svc_sub:"Basit bir transfer ya da gün boyu şoförlü araç.",
+      c1_h:"Havalimanı karşılama", c1_p:"Şoförünüz varış kapısında bekler ve sizi doğrudan İstanbul'daki otelinize götürür.",
+      c2_h:"Şoförlü araç, tam gün", c2_p:"Toplantı, fuar, gezi ya da akşam yemeği için gün boyu emrinizde bir araç. Sabit günlük fiyat.",
+      drv_h:"Turizm taşımacılığı firmaları ve şoförler", drv_sub:"İstanbul'a gelen yolculardan talep alın. Uygulamayı indirin, belgelerinizle başvurun, onaydan sonra başlayın.",
+      drv_cta:"Uygulamadan başvur", drv_mail:"Soru sor",
+      faq_h:"Sorular",
+      q1:"Ödemeyi uygulamada mı yapıyorum?", a1:"Hayır. Ödemeyi şoföre doğrudan yaparsınız. Uygulama sadece sizi ruhsatlı bir şoförle buluşturur.",
+      q2:"Hangi şehri kapsıyorsunuz?", a2:"İstanbul ve havalimanları.",
+      q3:"Fiyat gerçekten sabit mi?", a3:"Evet. Onaylamadan önce tek bir günlük fiyat görürsünüz, havalimanında pazarlık olmaz.",
+      q4:"Şoförün gerçekten benimki olduğunu nasıl anlarım?", a4:"Şoför, sizin paylaştığınız bir kodla karşılamayı doğrular, böylece sizi doğru kişi alır.",
+      ct_h:"İletişim", ct_sub:"Bir yolculuk ya da şoför olarak katılım hakkında sorunuz mu var? Bize yazın.",
+      legal:"Gizlilik ve Koşullar", nav_how:"Nasıl çalışır", nav_about:"Hakkımızda", nav_drivers:"Şoförler", nav_faq:"Sorular", nav_contact:"İletişim",
+      about_h:"Pera Vira Hakkında",
+      about_p1:"Pera Vira, İstanbul'a gelen yolcuları ruhsatlı yerel turizm taşımacılığı firmaları ve şoförlerle buluşturur.",
+      about_p2:"Her şoförün işletme yetkisini ve araç belgelerini inceler, tek ve net bir sabit fiyat sunar, ödemeyi sizinle şoför arasında bırakırız. Pera Vira, İstanbul merkezli <bdi dir=\"ltr\">ERBAYTRADE LTD</bdi> tarafından işletilir."
+    },
+    ar: {
+      h1:"إسطنبول، بكل سهولة.",
+      lead:"استقبال في المطار وسائق خاص ليوم كامل مع سائقين محليين مرخّصين. سعر ثابت، بلا مساومة وبلا مفاجآت.",
+      cta_app:"حمّل التطبيق من App Store", cta_wa:"راسلنا على واتساب",
+      note:"متوفر على iPhone. تدفع للسائق مباشرة، والتطبيق لا يستلم أي مدفوعات.",
+      how_h:"كيف يعمل؟", how_sub:"ثلاث خطوات، من وقت وصولك حتى لقاء سائقك.",
+      s1_h:"افتح طلبًا", s1_p:"اكتب المطار أو الفندق وتواريخك وعدد المسافرين.",
+      s2_h:"سائق مرخّص يقبل طلبك", s2_p:"لا يُعتمد السائق إلا بعد مراجعة رخصة التشغيل ووثائق المركبة.",
+      s3_h:"قابل سائقك عند الوصول", s3_p:"أكّد هوية سائقك برمز اللقاء، ثم ادفع له مباشرة. بلا رسوم خفية.",
+      sys_h:"نظامنا", sys_sub:"ترتيب بسيط وواضح لكل مسافر.",
+      p1_h:"سعر ثابت", p1_p:"ترى سعرًا يوميًا واحدًا قبل التأكيد، بلا مساومة في المطار.",
+      p2_h:"سائقون مرخّصون", p2_p:"نراجع رخصة التشغيل ووثائق المركبة قبل اعتماد أي سائق.",
+      p3_h:"رمز اللقاء", p3_p:"يؤكد السائق اللقاء برمز تشاركه أنت، فيستقلّك الشخص الصحيح فقط.",
+      p4_h:"الدفع للسائق مباشرة", p4_p:"التطبيق لا يتعامل مع مدفوعاتك. تسوّي الأجرة مع سائقك مباشرة.",
+      svc_h:"طريقتان للتنقل", svc_sub:"اختر توصيلة بسيطة أو سيارة مع سائق ليوم كامل.",
+      c1_h:"استقبال في المطار", c1_p:"ينتظرك سائقك في صالة الوصول ويوصلك مباشرة إلى فندقك في إسطنبول.",
+      c2_h:"سيارة وسائق ليوم كامل", c2_p:"مركبة تحت تصرفك طوال اليوم للاجتماعات أو المعارض أو الجولات أو العشاء، بسعر يومي ثابت.",
+      drv_h:"شركات النقل السياحي والسائقون", drv_sub:"استقبلوا طلبات المسافرين القادمين إلى إسطنبول. نزّلوا التطبيق، وقدّموا بوثائقكم، وابدؤوا بعد الاعتماد.",
+      drv_cta:"قدّم من التطبيق", drv_mail:"اطرح سؤالًا",
+      faq_h:"أسئلة",
+      q1:"هل أدفع داخل التطبيق؟", a1:"لا. تدفع للسائق مباشرة. التطبيق يربطك فقط بسائق مرخّص.",
+      q2:"ما المدن التي تغطونها؟", a2:"إسطنبول ومطاراتها.",
+      q3:"هل السعر ثابت فعلًا؟", a3:"نعم. ترى سعرًا يوميًا واحدًا قبل التأكيد، بلا مساومة في المطار.",
+      q4:"كيف أتأكد أنه سائقي؟", a4:"يؤكد السائق اللقاء برمز تشاركه أنت، فيستقلّك الشخص الصحيح فقط.",
+      ct_h:"تواصل معنا", ct_sub:"هل لديك سؤال عن رحلة أو عن الانضمام كسائق؟ راسلنا.",
+      legal:"الخصوصية والشروط", nav_how:"كيف يعمل", nav_about:"من نحن", nav_drivers:"السائقون", nav_faq:"أسئلة", nav_contact:"تواصل معنا",
+      about_h:"عن Pera Vira",
+      about_p1:"تربط Pera Vira المسافرين القادمين إلى إسطنبول بشركات نقل سياحي وسائقين محليين مرخّصين.",
+      about_p2:"نراجع رخصة تشغيل كل سائق ووثائق مركبته، ونقدّم سعرًا ثابتًا وواضحًا، ونترك الدفع بينك وبين سائقك. تُدار Pera Vira من قِبل شركة <bdi dir=\"ltr\">ERBAYTRADE LTD</bdi> ومقرها إسطنبول."
+    }
+  };
+  var en = {};
+  document.querySelectorAll("[data-i18n]").forEach(function (el) { en[el.dataset.i18n] = el.innerHTML; });
+  function setLang(l) {
+    document.documentElement.lang = l;
+    document.documentElement.dir = (l === "ar") ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var k = el.dataset.i18n, d = T[l];
+      el.innerHTML = (d && d[k]) ? d[k] : en[k];
+    });
+    var bd = document.getElementById("badge");
+    bd.src = (l === "tr") ? "badge-tr.svg" : "badge-en.svg";
+    bd.alt = (l === "tr") ? "App Store'dan indirin" : (l === "ar" ? "حمّل التطبيق من App Store" : "Download on the App Store");
+    document.querySelectorAll(".lang button").forEach(function (b) { b.classList.toggle("on", b.dataset.lang === l); });
+    try { localStorage.setItem("pv_lang", l); } catch (e) {}
   }
-  document.querySelectorAll('[data-lang]').forEach(function(b){b.onclick=function(){lang=b.dataset.lang;sync();};});
-  document.querySelectorAll('[data-doc]').forEach(function(b){b.onclick=function(){doc=b.dataset.doc;sync();};});
-  sync();
+  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
+  var saved = null; try { saved = localStorage.getItem("pv_lang"); } catch (e) {}
+  var nav = (navigator.language || "").toLowerCase();
+  var q = (location.search.match(/[?&]lang=(en|tr|ar)/) || [])[1];
+  setLang(q || saved || (nav.indexOf("tr") === 0 ? "tr" : (nav.indexOf("ar") === 0 ? "ar" : "en")));
+
+  if (WHATSAPP_NUMBER) {
+    ["wa", "wa2"].forEach(function (id) { var a = document.getElementById(id); a.href = "https://wa.me/" + WHATSAPP_NUMBER; a.hidden = false; });
+  }
+  ["mail", "mail2", "mail3"].forEach(function (id) {
+    var a = document.getElementById(id); a.href = "mailto:" + CONTACT_EMAIL;
+    if (id !== "mail2") a.textContent = CONTACT_EMAIL;
+  });
+  var menuBtn = document.querySelector(".menu"), navEl = document.getElementById("nav");
+  menuBtn.addEventListener("click", function () { var o = navEl.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", o); });
+  navEl.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", function () { navEl.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); }); });
 </script>
 </body>
 </html>
