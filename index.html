@@ -3,14 +3,34 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pera Vira — Private drivers in Istanbul</title>
-<meta name="description" content="Airport meet and greet and full-day chauffeur service in Istanbul with licensed local drivers. One fixed price, no surprises.">
+<title>Pera Vira — Private Driver & Airport Meet and Greet in Istanbul</title>
+<meta name="description" content="Book a licensed private driver in Istanbul: airport meet and greet or a full-day car with driver. One fixed price, pay your driver directly. iPhone app.">
+<link rel="canonical" href="https://peravira.com/">
+<link rel="alternate" hreflang="en" href="https://peravira.com/">
+<link rel="alternate" hreflang="tr" href="https://peravira.com/tr/">
+<link rel="alternate" hreflang="ar" href="https://peravira.com/ar/">
+<link rel="alternate" hreflang="x-default" href="https://peravira.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="apple-itunes-app" content="app-id=6815432878">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pera Vira">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://peravira.com/">
 <meta property="og:title" content="Pera Vira — Istanbul, handled.">
-<meta property="og:description" content="Airport meet and greet and full-day chauffeur service in Istanbul with licensed local drivers. One fixed price.">
-<meta property="og:image" content="icon.png">
+<meta property="og:description" content="Book a licensed private driver in Istanbul: airport meet and greet or a full-day car with driver. One fixed price, pay your driver directly. iPhone app.">
+<meta property="og:image" content="https://peravira.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Pera Vira — Istanbul, handled.">
+<meta name="twitter:description" content="Book a licensed private driver in Istanbul: airport meet and greet or a full-day car with driver. One fixed price, pay your driver directly. iPhone app.">
+<meta name="twitter:image" content="https://peravira.com/og.png">
 <meta name="theme-color" content="#0F0E0B">
-<link rel="icon" href="favicon.png">
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "Pera Vira", "url": "https://peravira.com/", "logo": "https://peravira.com/icon.png", "email": "info@peravira.com", "telephone": "+90 505 005 1949", "legalName": "ERBAYTRADE LTD", "contactPoint": [{"@type": "ContactPoint", "contactType": "customer support", "email": "info@peravira.com", "telephone": "+90 505 005 1949", "availableLanguage": ["tr", "en", "ar"]}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "Pera Vira", "operatingSystem": "iOS", "applicationCategory": "TravelApplication", "description": "Book a licensed private driver in Istanbul: airport meet and greet or a full-day car with driver. One fixed price, pay your driver directly. iPhone app.", "inLanguage": "en", "url": "https://peravira.com/", "downloadUrl": "https://apps.apple.com/app/id6815432878", "installUrl": "https://apps.apple.com/app/id6815432878", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Do I pay in the app?", "acceptedAnswer": {"@type": "Answer", "text": "No. You pay your driver directly. The app only connects you with a licensed driver."}}, {"@type": "Question", "name": "Which city do you cover?", "acceptedAnswer": {"@type": "Answer", "text": "Istanbul and its airports."}}, {"@type": "Question", "name": "Is the price really fixed?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You see one daily price before you confirm, with no haggling at the airport."}}, {"@type": "Question", "name": "How do I know it is my driver?", "acceptedAnswer": {"@type": "Answer", "text": "Your driver confirms the meeting with a code that you share, so only the right person takes you."}}]}</script>
 <style>
   :root {
     color-scheme: dark;
@@ -36,8 +56,9 @@
   .brand { display:flex; align-items:center; gap:10px; text-decoration:none; font-family:Georgia,serif; font-weight:700; font-size:20px; }
   .brand img { width:34px; height:34px; border-radius:9px; box-shadow:0 0 0 1px #3A3424; }
   .lang { display:flex; gap:6px; }
-  .lang button { border:1px solid var(--line); background:transparent; color:var(--dim); font:600 13px/1 inherit; border-radius:999px; padding:8px 12px; cursor:pointer; }
-  .lang button.on { background:var(--ink); color:var(--bg); border-color:var(--ink); }
+  .lang a { text-decoration:none; display:inline-block; text-align:center; }
+  .lang button, .lang a { border:1px solid var(--line); background:transparent; color:var(--dim); font:600 13px/1 inherit; border-radius:999px; padding:8px 12px; cursor:pointer; }
+  .lang button.on, .lang a.on { background:var(--ink); color:var(--bg); border-color:var(--ink); }
 
   .hero { text-align:center; padding:56px 0 84px; }
   .logo { width:104px; height:104px; border-radius:26px; margin:0 auto 28px; display:block; box-shadow:0 0 0 1px #3A3424, 0 18px 60px rgba(201,164,92,.22); }
@@ -121,96 +142,93 @@
 <body>
 <div class="wrap">
   <header>
-    <a class="brand" href="#top"><img src="icon.png" alt="" width="34" height="34"><span>Pera Vira</span></a>
+    <a class="brand" href="/"><img src="/icon.png" alt="" width="34" height="34"><span>Pera Vira</span></a>
     <nav id="nav" aria-label="Main">
-      <a href="#how" data-i18n="nav_how">How it works</a>
-      <a href="#about" data-i18n="nav_about">About</a>
-      <a href="#drivers" data-i18n="nav_drivers">Drivers</a>
-      <a href="#faq" data-i18n="nav_faq">Questions</a>
-      <a href="#contact" data-i18n="nav_contact">Contact</a>
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#drivers">Drivers</a>
+      <a href="#faq">Questions</a>
+      <a href="#contact">Contact</a>
     </nav>
-    <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="en" class="on">EN</button>
-      <button type="button" data-lang="tr">TR</button>
-      <button type="button" data-lang="ar">AR</button>
-    </div>
+    <div class="lang" role="navigation" aria-label="Language"><a class="on" href="/" hreflang="en" lang="en">EN</a><a href="/tr/" hreflang="tr" lang="tr">TR</a><a href="/ar/" hreflang="ar" lang="ar">AR</a></div>
     <button type="button" class="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">&#9776;</button>
   </header>
 
   <main id="top">
     <div class="hero">
-      <img class="logo" src="icon.png" alt="Pera Vira" width="104" height="104">
-      <h1 data-i18n="h1">Istanbul, handled.</h1>
-      <p class="lead" data-i18n="lead">Airport meet and greet and full-day chauffeur service with licensed local drivers. One fixed price, no haggling, no surprises.</p>
+      <img class="logo" src="/icon.png" alt="Pera Vira" width="104" height="104">
+      <h1>Istanbul, handled.</h1>
+      <p class="lead">Airport meet and greet and full-day chauffeur service with licensed local drivers. One fixed price, no haggling, no surprises.</p>
       <div class="cta">
-        <a class="badge" href="https://apps.apple.com/app/id6815432878"><img id="badge" src="badge-en.svg" alt="Download on the App Store" height="56"></a>
-        <a class="btn ghost" id="wa" href="#" hidden data-i18n="cta_wa">Message us on WhatsApp</a>
+        <a class="badge" href="https://apps.apple.com/app/id6815432878"><img id="badge" src="/badge-en.svg" alt="Download on the App Store" height="56"></a>
+        <a class="btn ghost" id="wa" href="#" hidden>Message us on WhatsApp</a>
       </div>
-      <p class="note" data-i18n="note">Available on iPhone. Pay your driver directly. The app does not take payments.</p>
+      <p class="note">Available on iPhone. Pay your driver directly. The app does not take payments.</p>
     </div>
 
     <section id="how">
-      <h2 data-i18n="how_h">How it works</h2>
-      <p class="sub" data-i18n="how_sub">Three steps, from your arrival time to your driver at the gate.</p>
+      <h2>How it works</h2>
+      <p class="sub">Three steps, from your arrival time to your driver at the gate.</p>
       <ol class="steps">
-        <li><h3 data-i18n="s1_h">Open a request</h3><p data-i18n="s1_p">Tell us the airport or hotel, your dates and how many travellers.</p></li>
-        <li><h3 data-i18n="s2_h">A licensed driver accepts</h3><p data-i18n="s2_p">A driver is approved only after their operating licence and vehicle documents are reviewed.</p></li>
-        <li><h3 data-i18n="s3_h">Meet at arrivals</h3><p data-i18n="s3_p">Confirm your driver with a meeting code, then pay them directly. No hidden extras.</p></li>
+        <li><h3>Open a request</h3><p>Tell us the airport or hotel, your dates and how many travellers.</p></li>
+        <li><h3>A licensed driver accepts</h3><p>A driver is approved only after their operating licence and vehicle documents are reviewed.</p></li>
+        <li><h3>Meet at arrivals</h3><p>Confirm your driver with a meeting code, then pay them directly. No hidden extras.</p></li>
       </ol>
     </section>
 
     <section id="system">
-      <h2 data-i18n="sys_h">Our system</h2>
-      <p class="sub" data-i18n="sys_sub">A simple, clear arrangement for every traveller.</p>
+      <h2>Our system</h2>
+      <p class="sub">A simple, clear arrangement for every traveller.</p>
       <div class="principles">
-        <div><h3 data-i18n="p1_h">One fixed price</h3><p data-i18n="p1_p">You see a single daily price before you confirm, with no haggling at the airport.</p></div>
-        <div><h3 data-i18n="p2_h">Licensed drivers</h3><p data-i18n="p2_p">We review the operating licence and vehicle documents before approving any driver.</p></div>
-        <div><h3 data-i18n="p3_h">Meeting code</h3><p data-i18n="p3_p">Your driver confirms the meeting with a code that you share, so only the right person takes you.</p></div>
-        <div><h3 data-i18n="p4_h">Pay your driver directly</h3><p data-i18n="p4_p">The app does not handle your payment. You settle the fare with your driver.</p></div>
+        <div><h3>One fixed price</h3><p>You see a single daily price before you confirm, with no haggling at the airport.</p></div>
+        <div><h3>Licensed drivers</h3><p>We review the operating licence and vehicle documents before approving any driver.</p></div>
+        <div><h3>Meeting code</h3><p>Your driver confirms the meeting with a code that you share, so only the right person takes you.</p></div>
+        <div><h3>Pay your driver directly</h3><p>The app does not handle your payment. You settle the fare with your driver.</p></div>
       </div>
     </section>
 
     <section id="services">
-      <h2 data-i18n="svc_h">Two ways to travel</h2>
-      <p class="sub" data-i18n="svc_sub">Choose a simple transfer or keep a car and driver for the day.</p>
+      <h2>Two ways to travel</h2>
+      <p class="sub">Choose a simple transfer or keep a car and driver for the day.</p>
       <div class="services">
-        <div class="card"><h3 data-i18n="c1_h">Airport meet and greet</h3><p data-i18n="c1_p">Your driver waits at arrivals and takes you straight to your hotel in Istanbul.</p></div>
-        <div class="card"><h3 data-i18n="c2_h">Car and driver, full day</h3><p data-i18n="c2_p">One vehicle at your disposal all day, for meetings, fairs, sightseeing or dinner. Fixed daily price.</p></div>
+        <div class="card"><h3>Airport meet and greet</h3><p>Your driver waits at arrivals and takes you straight to your hotel in Istanbul.</p></div>
+        <div class="card"><h3>Car and driver, full day</h3><p>One vehicle at your disposal all day, for meetings, fairs, sightseeing or dinner. Fixed daily price.</p></div>
       </div>
+      <p class="sub" style="margin:28px 0 0">Istanbul Airport (IST), Sabiha Gökçen Airport (SAW), hotels, trade fairs, business meetings and city tours: your driver is a licensed local professional.</p>
     </section>
 
     <section id="about">
-      <h2 data-i18n="about_h">About Pera Vira</h2>
-      <p class="sub" data-i18n="about_p1">Pera Vira connects travellers coming to Istanbul with licensed local tourism transport companies and drivers.</p>
-      <p class="sub" data-i18n="about_p2" style="margin-bottom:0">We review each driver's operating licence and vehicle documents, keep one clear fixed price, and leave payment between you and your driver. Pera Vira is operated by <bdi dir="ltr">ERBAYTRADE LTD</bdi>, based in Istanbul.</p>
+      <h2>About Pera Vira</h2>
+      <p class="sub">Pera Vira connects travellers coming to Istanbul with licensed local tourism transport companies and drivers.</p>
+      <p class="sub" style="margin-bottom:0">We review each driver's operating licence and vehicle documents, keep one clear fixed price, and leave payment between you and your driver. Pera Vira is operated by <bdi dir="ltr">ERBAYTRADE LTD</bdi>, based in Istanbul.</p>
     </section>
 
     <section id="drivers" class="drivers">
       <div>
-        <h2 data-i18n="drv_h">Tourism transport companies and drivers</h2>
-        <p class="sub" data-i18n="drv_sub">Receive requests from travellers coming to Istanbul. Install the app, apply with your documents, and start once approved.</p>
+        <h2>Tourism transport companies and drivers</h2>
+        <p class="sub">Receive requests from travellers coming to Istanbul. Install the app, apply with your documents, and start once approved.</p>
         <div class="cta" style="justify-content:flex-start">
-          <a class="btn primary" href="https://apps.apple.com/app/id6815432878" data-i18n="drv_cta">Apply in the app</a>
-          <a class="btn ghost" id="mail2" href="#" data-i18n="drv_mail">Ask us a question</a>
+          <a class="btn primary" href="https://apps.apple.com/app/id6815432878">Apply in the app</a>
+          <a class="btn ghost" id="mail2" href="#">Ask us a question</a>
         </div>
       </div>
     </section>
 
     <section id="faq">
-      <h2 data-i18n="faq_h">Questions</h2>
-      <details><summary data-i18n="q1">Do I pay in the app?</summary><p data-i18n="a1">No. You pay your driver directly. The app only connects you with a licensed driver.</p></details>
-      <details><summary data-i18n="q2">Which city do you cover?</summary><p data-i18n="a2">Istanbul and its airports.</p></details>
-      <details><summary data-i18n="q3">Is the price really fixed?</summary><p data-i18n="a3">Yes. You see one daily price before you confirm, with no haggling at the airport.</p></details>
-      <details><summary data-i18n="q4">How do I know it is my driver?</summary><p data-i18n="a4">Your driver confirms the meeting with a code that you share, so only the right person takes you.</p></details>
+      <h2>Questions</h2>
+      <details><summary>Do I pay in the app?</summary><p>No. You pay your driver directly. The app only connects you with a licensed driver.</p></details>
+      <details><summary>Which city do you cover?</summary><p>Istanbul and its airports.</p></details>
+      <details><summary>Is the price really fixed?</summary><p>Yes. You see one daily price before you confirm, with no haggling at the airport.</p></details>
+      <details><summary>How do I know it is my driver?</summary><p>Your driver confirms the meeting with a code that you share, so only the right person takes you.</p></details>
     </section>
 
     <section class="contact" id="contact">
-      <h2 data-i18n="ct_h">Contact</h2>
-      <p class="sub" data-i18n="ct_sub">Questions about a trip or about joining as a driver? Write to us.</p>
+      <h2>Contact</h2>
+      <p class="sub">Questions about a trip or about joining as a driver? Write to us.</p>
       <div class="cta">
         <a class="btn primary" id="mail3" href="#"></a>
         <a class="btn ghost" id="tel" href="tel:+905050051949"><bdi dir="ltr">+90 505 005 1949</bdi></a>
-        <a class="btn ghost" id="wa2" href="#" hidden data-i18n="cta_wa">Message us on WhatsApp</a>
+        <a class="btn ghost" id="wa2" href="#" hidden>Message us on WhatsApp</a>
       </div>
     </section>
   </main>
@@ -222,7 +240,7 @@
         ERBAYTRADE LTD
       </div>
       <div>
-        <a href="pera-legal.html" data-i18n="legal">Privacy &amp; Terms</a><br>
+        <a href="/pera-legal.html">Privacy &amp; Terms</a><br>
         <a href="tel:+905050051949"><bdi dir="ltr">+90 505 005 1949</bdi></a><br>
         <a id="mail" href="#"></a>
       </div>
@@ -231,98 +249,13 @@
 </div>
 
 <script>
-  // Fill in: empty WHATSAPP_NUMBER hides the WhatsApp buttons.
-  var WHATSAPP_NUMBER = "905050051949";                 // e.g. 905551234567 (country code, no plus sign, no spaces)
+  var WHATSAPP_NUMBER = "905050051949";
   var CONTACT_EMAIL = "info@peravira.com";
-
-  var T = {
-    tr: {
-      h1:"İstanbul, tek dokunuşla.",
-      lead:"Havalimanı karşılama ve günlük şoförlü araç hizmeti, ruhsatlı yerel şoförlerle. Sabit fiyat, pazarlık yok, sürpriz yok.",
-      cta_app:"App Store'dan indir", cta_wa:"WhatsApp'tan yaz",
-      note:"iPhone için mevcut. Ödemeyi şoföre doğrudan yaparsınız, uygulama ödeme almaz.",
-      how_h:"Nasıl çalışır?", how_sub:"Üç adımda, varış saatinizden şoförünüzü kapıda görmeye kadar.",
-      s1_h:"Talep açın", s1_p:"Havalimanı ya da oteli, tarihlerinizi ve yolcu sayısını yazın.",
-      s2_h:"Ruhsatlı bir şoför kabul eder", s2_p:"Bir şoför, yetki ve araç belgeleri incelendikten sonra onaylanır.",
-      s3_h:"Varışta buluşun", s3_p:"Şoförünüzü karşılama koduyla doğrulayın, ödemeyi ona doğrudan yapın. Gizli ek ücret yok.",
-      sys_h:"Sistemimiz", sys_sub:"Her yolcu için sade ve net bir düzen.",
-      p1_h:"Sabit fiyat", p1_p:"Onaylamadan önce tek bir günlük fiyat görürsünüz, havalimanında pazarlık olmaz.",
-      p2_h:"Ruhsatlı şoförler", p2_p:"Bir şoförü onaylamadan önce işletme yetkisini ve araç belgelerini inceleriz.",
-      p3_h:"Karşılama kodu", p3_p:"Şoför, sizin paylaştığınız bir kodla karşılamayı doğrular, böylece sizi doğru kişi alır.",
-      p4_h:"Ödeme şoföre doğrudan", p4_p:"Uygulama ödeme almaz. Ücreti şoförle doğrudan siz kapatırsınız.",
-      svc_h:"İki seçenek", svc_sub:"Basit bir transfer ya da gün boyu şoförlü araç.",
-      c1_h:"Havalimanı karşılama", c1_p:"Şoförünüz varış kapısında bekler ve sizi doğrudan İstanbul'daki otelinize götürür.",
-      c2_h:"Şoförlü araç, tam gün", c2_p:"Toplantı, fuar, gezi ya da akşam yemeği için gün boyu emrinizde bir araç. Sabit günlük fiyat.",
-      drv_h:"Turizm taşımacılığı firmaları ve şoförler", drv_sub:"İstanbul'a gelen yolculardan talep alın. Uygulamayı indirin, belgelerinizle başvurun, onaydan sonra başlayın.",
-      drv_cta:"Uygulamadan başvur", drv_mail:"Soru sor",
-      faq_h:"Sorular",
-      q1:"Ödemeyi uygulamada mı yapıyorum?", a1:"Hayır. Ödemeyi şoföre doğrudan yaparsınız. Uygulama sadece sizi ruhsatlı bir şoförle buluşturur.",
-      q2:"Hangi şehri kapsıyorsunuz?", a2:"İstanbul ve havalimanları.",
-      q3:"Fiyat gerçekten sabit mi?", a3:"Evet. Onaylamadan önce tek bir günlük fiyat görürsünüz, havalimanında pazarlık olmaz.",
-      q4:"Şoförün gerçekten benimki olduğunu nasıl anlarım?", a4:"Şoför, sizin paylaştığınız bir kodla karşılamayı doğrular, böylece sizi doğru kişi alır.",
-      ct_h:"İletişim", ct_sub:"Bir yolculuk ya da şoför olarak katılım hakkında sorunuz mu var? Bize yazın.",
-      legal:"Gizlilik ve Koşullar", nav_how:"Nasıl çalışır", nav_about:"Hakkımızda", nav_drivers:"Şoförler", nav_faq:"Sorular", nav_contact:"İletişim",
-      about_h:"Pera Vira Hakkında",
-      about_p1:"Pera Vira, İstanbul'a gelen yolcuları ruhsatlı yerel turizm taşımacılığı firmaları ve şoförlerle buluşturur.",
-      about_p2:"Her şoförün işletme yetkisini ve araç belgelerini inceler, tek ve net bir sabit fiyat sunar, ödemeyi sizinle şoför arasında bırakırız. Pera Vira, İstanbul merkezli <bdi dir=\"ltr\">ERBAYTRADE LTD</bdi> tarafından işletilir."
-    },
-    ar: {
-      h1:"إسطنبول، بكل سهولة.",
-      lead:"استقبال في المطار وسائق خاص ليوم كامل مع سائقين محليين مرخّصين. سعر ثابت، بلا مساومة وبلا مفاجآت.",
-      cta_app:"حمّل التطبيق من App Store", cta_wa:"راسلنا على واتساب",
-      note:"متوفر على iPhone. تدفع للسائق مباشرة، والتطبيق لا يستلم أي مدفوعات.",
-      how_h:"كيف يعمل؟", how_sub:"ثلاث خطوات، من وقت وصولك حتى لقاء سائقك.",
-      s1_h:"افتح طلبًا", s1_p:"اكتب المطار أو الفندق وتواريخك وعدد المسافرين.",
-      s2_h:"سائق مرخّص يقبل طلبك", s2_p:"لا يُعتمد السائق إلا بعد مراجعة رخصة التشغيل ووثائق المركبة.",
-      s3_h:"قابل سائقك عند الوصول", s3_p:"أكّد هوية سائقك برمز اللقاء، ثم ادفع له مباشرة. بلا رسوم خفية.",
-      sys_h:"نظامنا", sys_sub:"ترتيب بسيط وواضح لكل مسافر.",
-      p1_h:"سعر ثابت", p1_p:"ترى سعرًا يوميًا واحدًا قبل التأكيد، بلا مساومة في المطار.",
-      p2_h:"سائقون مرخّصون", p2_p:"نراجع رخصة التشغيل ووثائق المركبة قبل اعتماد أي سائق.",
-      p3_h:"رمز اللقاء", p3_p:"يؤكد السائق اللقاء برمز تشاركه أنت، فيستقلّك الشخص الصحيح فقط.",
-      p4_h:"الدفع للسائق مباشرة", p4_p:"التطبيق لا يتعامل مع مدفوعاتك. تسوّي الأجرة مع سائقك مباشرة.",
-      svc_h:"طريقتان للتنقل", svc_sub:"اختر توصيلة بسيطة أو سيارة مع سائق ليوم كامل.",
-      c1_h:"استقبال في المطار", c1_p:"ينتظرك سائقك في صالة الوصول ويوصلك مباشرة إلى فندقك في إسطنبول.",
-      c2_h:"سيارة وسائق ليوم كامل", c2_p:"مركبة تحت تصرفك طوال اليوم للاجتماعات أو المعارض أو الجولات أو العشاء، بسعر يومي ثابت.",
-      drv_h:"شركات النقل السياحي والسائقون", drv_sub:"استقبلوا طلبات المسافرين القادمين إلى إسطنبول. نزّلوا التطبيق، وقدّموا بوثائقكم، وابدؤوا بعد الاعتماد.",
-      drv_cta:"قدّم من التطبيق", drv_mail:"اطرح سؤالًا",
-      faq_h:"أسئلة",
-      q1:"هل أدفع داخل التطبيق؟", a1:"لا. تدفع للسائق مباشرة. التطبيق يربطك فقط بسائق مرخّص.",
-      q2:"ما المدن التي تغطونها؟", a2:"إسطنبول ومطاراتها.",
-      q3:"هل السعر ثابت فعلًا؟", a3:"نعم. ترى سعرًا يوميًا واحدًا قبل التأكيد، بلا مساومة في المطار.",
-      q4:"كيف أتأكد أنه سائقي؟", a4:"يؤكد السائق اللقاء برمز تشاركه أنت، فيستقلّك الشخص الصحيح فقط.",
-      ct_h:"تواصل معنا", ct_sub:"هل لديك سؤال عن رحلة أو عن الانضمام كسائق؟ راسلنا.",
-      legal:"الخصوصية والشروط", nav_how:"كيف يعمل", nav_about:"من نحن", nav_drivers:"السائقون", nav_faq:"أسئلة", nav_contact:"تواصل معنا",
-      about_h:"عن Pera Vira",
-      about_p1:"تربط Pera Vira المسافرين القادمين إلى إسطنبول بشركات نقل سياحي وسائقين محليين مرخّصين.",
-      about_p2:"نراجع رخصة تشغيل كل سائق ووثائق مركبته، ونقدّم سعرًا ثابتًا وواضحًا، ونترك الدفع بينك وبين سائقك. تُدار Pera Vira من قِبل شركة <bdi dir=\"ltr\">ERBAYTRADE LTD</bdi> ومقرها إسطنبول."
-    }
-  };
-  var en = {};
-  document.querySelectorAll("[data-i18n]").forEach(function (el) { en[el.dataset.i18n] = el.innerHTML; });
-  function setLang(l) {
-    document.documentElement.lang = l;
-    document.documentElement.dir = (l === "ar") ? "rtl" : "ltr";
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var k = el.dataset.i18n, d = T[l];
-      el.innerHTML = (d && d[k]) ? d[k] : en[k];
-    });
-    var bd = document.getElementById("badge");
-    bd.src = (l === "tr") ? "badge-tr.svg" : "badge-en.svg";
-    bd.alt = (l === "tr") ? "App Store'dan indirin" : (l === "ar" ? "حمّل التطبيق من App Store" : "Download on the App Store");
-    document.querySelectorAll(".lang button").forEach(function (b) { b.classList.toggle("on", b.dataset.lang === l); });
-    try { localStorage.setItem("pv_lang", l); } catch (e) {}
-  }
-  document.querySelectorAll(".lang button").forEach(function (b) { b.addEventListener("click", function () { setLang(b.dataset.lang); }); });
-  var saved = null; try { saved = localStorage.getItem("pv_lang"); } catch (e) {}
-  var nav = (navigator.language || "").toLowerCase();
-  var q = (location.search.match(/[?&]lang=(en|tr|ar)/) || [])[1];
-  setLang(q || saved || (nav.indexOf("tr") === 0 ? "tr" : (nav.indexOf("ar") === 0 ? "ar" : "en")));
-
   if (WHATSAPP_NUMBER) {
-    ["wa", "wa2"].forEach(function (id) { var a = document.getElementById(id); a.href = "https://wa.me/" + WHATSAPP_NUMBER; a.hidden = false; });
+    ["wa", "wa2"].forEach(function (id) { var a = document.getElementById(id); if (a) { a.href = "https://wa.me/" + WHATSAPP_NUMBER; a.hidden = false; } });
   }
   ["mail", "mail2", "mail3"].forEach(function (id) {
-    var a = document.getElementById(id); a.href = "mailto:" + CONTACT_EMAIL;
+    var a = document.getElementById(id); if (!a) return; a.href = "mailto:" + CONTACT_EMAIL;
     if (id !== "mail2") a.textContent = CONTACT_EMAIL;
   });
   var menuBtn = document.querySelector(".menu"), navEl = document.getElementById("nav");
